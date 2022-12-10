@@ -1,0 +1,20 @@
+---
+title: "Vegalite with OJS and Quarto"
+format: html
+---
+
+
+```{ojs}
+import {vl} from "@vega/vega-lite-api-v5"
+
+vl.markPoint().data(vl.sequence(1, 10, 1).as("x"))
+  .encode(
+        vl.x().fieldQ("x"),
+        vl.y().fieldQ("x")
+        )
+  .width("container")
+  .render()
+
+
+```
+
